@@ -3,7 +3,6 @@ target/
 Cargo.lock
 
 # IDE files
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -43,3 +42,4 @@ stellar-scanner.toml
 PULL_REQUEST_TEMPLATE.md
 whitelist.md
 node_modules
+config.bat
