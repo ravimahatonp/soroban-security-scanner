@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "scan": "node src/index.js",
-    "start": "node src/index.js",
+    "start": "node init && node src/index.js",
     "test": "jest --passWithNoTests",
     "test:e2e": "playwright test",
     "test:a11y": "playwright test tests/e2e/accessibility.spec.js",
@@ -13,11 +13,11 @@
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" \"frontend/**/*.{js,jsx,ts,tsx}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\" \"frontend/**/*.{js,jsx,ts,tsx}\"",
-    "build:components": "cd component-library && npm run build",
-    "dev:components": "cd component-library && npm run dev",
+    "build:components": "node init && cd component-library && npm run build",
+    "dev:components": "node init && cd component-library && npm run dev",
     "install:components": "cd component-library && npm install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "test-storybook": "test-storybook",
     "prepare": "husky"
   },
